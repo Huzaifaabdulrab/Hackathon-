@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Resume</title>
+  <link rel="stylesheet" href="./style.css">
+  
+
+</head>
+<body>
+<h1 class="Heading">Dynamic Resume Builder </h1>
+  <div class="form">
+    <h2>Enter Your Details</h2>
+    <label for="profile-pic">Profile Picture:</label>
+    <input type="file" id="profile-pic" accept="image/*" onchange="loadProfilePic(event)">
+    
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Your Name">
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Your Email">
+    
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" placeholder="Your Contact Number">
+    
+    <label for="address">Address:</label>
+    <input type="text" id="address" placeholder="Your Address">
+    
+    <label for="education">Education:</label>
+    <input type="text" id="education" placeholder="Your Education">
+    
+    <label for="skills">Skills:</label>
+    <input type="text" id="skills" placeholder="Your Skills">
+    
+    <button onclick="updateResume()">Update Resume</button>
+  </div>
+
+  <div class="resume">
+    <img id="profile-display" src="profile.jpg" alt="Profile Picture" style="display:none;">
+    <h1 id="display-name">Your Name</h1>
+    <p id="display-email">Your Email</p>
+    <p id="display-contact">Your Contact</p>
+    <p id="display-address">Your Address</p>
+    <p id="display-education">Your Education</p>
+    <p id="display-skills">Your Skills</p>
+  
+  </div>
+  <button id="toggle-button" onclick="toggleResume()">View Resume</button>
+  
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
+
